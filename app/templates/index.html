@@ -15,6 +15,9 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         .header {
             background-color: #4a1;
@@ -28,7 +31,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             margin: 20px auto;
-            max-width: 600px;
+            max-width: 350px;
         }
         .product-image {
             width: 100%;
@@ -49,10 +52,11 @@
             line-height: 1.5;
         }
         .product-price {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
             color: #4a1;
             margin-bottom: 15px;
+            letter-spacing: 0.5px;
         }
         .product-stock {
             color: #666;
@@ -82,12 +86,37 @@
     
     <div class="container">
         <div class="product-card">
-            <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product-image">
+            <img src="https://images.unsplash.com/photo-1532336414038-cf19250c5757" alt="Garam Masala" class="product-image">
             <div class="product-info">
-                <h2 class="product-title">{{ product.name }}</h2>
-                <p class="product-description">{{ product.description }}</p>
-                <p class="product-price">${{ product.price }}</p>
-                <p class="product-stock">In stock: {{ product.stock }} units</p>
+                <h2 class="product-title">Garam Masala</h2>
+                <p class="product-description">Our signature blend of aromatic spices including cardamom, cinnamon, cloves, and black pepper. Perfect for classic Indian curries and rice dishes.</p>
+                <p class="product-description" style="font-style: italic;">தமிழ் பாரம்பரிய முறையில் தயாரிக்கப்பட்ட கரம் மசாலா - உணவுக்கு சிறந்த மணமும் சுவையும் சேர்க்கும்.</p>
+                <p class="product-price">₹299</p>
+                <p class="product-stock">In stock: 45 units</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1599789197514-47270cd526b4" alt="Kuzhambu Masala" class="product-image">
+            <div class="product-info">
+                <h2 class="product-title">Kuzhambu Masala</h2>
+                <p class="product-description">Traditional South Indian spice blend perfect for making authentic Tamil Nadu style kuzhambu, sambar and rasam. Rich in flavors and aroma.</p>
+                <p class="product-description" style="font-style: italic;">நம் பாட்டி வீட்டு சுவையில் குழம்பு மசாலா - தமிழ் உணவின் அசல் சுவையை அனுபவிக்க.</p>
+                <p class="product-price">₹249</p>
+                <p class="product-stock">In stock: 36 units</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1518110925495-b37653f402e5" alt="Mizhagai Thool" class="product-image">
+            <div class="product-info">
+                <h2 class="product-title">Mizhagai Thool</h2>
+                <p class="product-description">Hand-ground red chili powder made from premium Guntur chilies. Adds the perfect level of heat and color to your dishes without overpowering the flavor.</p>
+                <p class="product-description" style="font-style: italic;">சிவப்பு மிளகாய் தூள் - தமிழ் சமையலுக்கு தேவையான காரமும் நிறமும் கொடுக்கும்.</p>
+                <p class="product-price">₹199</p>
+                <p class="product-stock">In stock: 50 units</p>
                 <button class="btn">Add to Cart</button>
             </div>
         </div>
