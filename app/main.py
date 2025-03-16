@@ -10,6 +10,9 @@ import os
 # Initialize FastAPI app
 app = FastAPI(title="Nagaram Masala", description="A simple ecommerce site for Nagaram Masala products")
 
+# Mount static files directory
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
+
 # Setup template directory
 templates = Jinja2Templates(directory="app/templates")
 
